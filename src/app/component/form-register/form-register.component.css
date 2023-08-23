@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 40vh;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: solid 5px #0e5479;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+   color: black;
+   background-color: #eb8e6f;
+   padding: 10px;
+}
+
+.input{
+    margin: 10px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: gray;
+    font-family: 'Lobster', cursive;
+    background-color: white
+  
+    
+}
+
+::placeholder{
+    color: black;
+}
+
+.buttom{
+    background-color: #0e5479;
+    border-radius: 5px;
+    font-family: 'Lobster', cursive;
+    
+}

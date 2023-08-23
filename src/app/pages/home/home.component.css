@@ -1,0 +1,22 @@
+.fondo{
+   background-image: url(src/assets/img/libros.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   height: 86vb;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+
+.texto{
+    font-family: 'Lobster', cursive;
+    height: 80vh;
+    width: 40vw;
+    font-size: 185px;
+    color: white;
+}

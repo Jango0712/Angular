@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    background:rgb(64, 0, 0);
+    height: 7vh;
+    width: 100vw;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.books{
+    height: 7vh;
+    width: 5vw;
+    border-radius: 5px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.listNav{
+    display: flex;
+    gap: 5px;
+    width: 30vw;
+    list-style: none;
+    font-size: 30px;
+    justify-content: space-around;
+ 
+}
+
+.routing{
+    text-decoration: none;
+    color: rgb(144, 142, 142);
+}
+
+a:hover{
+    color: white;
+    transition: 1s;
+}
+
