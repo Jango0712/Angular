@@ -17,6 +17,6 @@ update(nombre:HTMLInputElement, apellidos:HTMLInputElement, correo:HTMLInputElem
   this.user.apellidos = apellidos.value;
   this.user.correo = correo.value;
   this.user.photo = url.value;
-
+console.log(this.user.nombre)
 }
 }
