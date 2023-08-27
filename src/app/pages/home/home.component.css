@@ -15,8 +15,12 @@
 
 .texto{
     font-family: 'Lobster', cursive;
-    height: 80vh;
-    width: 40vw;
-    font-size: 185px;
+    height: 100%;
+    width: 100%;
+    font-size: 280px;
     color: white;
+    text-align: center;
+    text-shadow: 1px 1px 20px whitesmoke;
+    background-color: rgba(0, 0, 0, 0.66);
+   
 }

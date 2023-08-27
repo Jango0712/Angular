@@ -1,12 +1,20 @@
 .header{
     display: flex;
-    background:rgb(64, 0, 0);
+    background-color: black;
     height: 7vh;
     width: 100vw;
     align-items: center;
     color: white;
     justify-content: space-between;
     padding: 25px;
+}
+
+.routing.active{
+    color: white;
+    background-color: rgb(110, 5, 5);
+    border-radius: 5px;
+    transition: 400ms;
+    box-shadow: 1px 1px 20px 0px #79170e;
 }
 
 .books{
@@ -40,4 +48,5 @@ a:hover{
     color: white;
     transition: 1s;
 }
+
 
