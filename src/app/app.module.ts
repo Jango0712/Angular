@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BooksComponent } from './pages/books/books.component';
+import { RefPipe } from './pipes/ref.pipe';
 
 
 
@@ -21,6 +23,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     FormRegisterComponent,
     RegisterComponent,
     ProfileComponent,
+    BooksComponent,
+    RefPipe,
    
 
   ],

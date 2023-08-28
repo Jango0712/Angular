@@ -1,0 +1,37 @@
+<main class="fondo">
+
+    <div class="cartas">
+        <div *ngIf="books.length != 0" class="mensaje"><p>Libros</p></div>
+        <div *ngIf="books.length === 0" class="mensaje2"><p>No hay libros...</p></div>
+      <div *ngIf="books.length != 0" class="cards"> 
+       <ng-container *ngFor="let book of books; let i = index">
+        <div  class="card">
+            <div class="img"><img class="img-img" src="{{book.photo}}" alt=""></div>
+            <div class="body">
+                <p class="titulo">{{book.title}}</p>
+                <p class="datos">{{ book.type }}</p>
+                <p class="datos">{{ book.author }}</p>
+                <p class="datos">{{ book.id_user }}</p>
+                <p class="datos">{{ book.id_book | ref}}</p>
+                <p class="datos">{{ book.price }} €</p>
+            </div>
+            <button [ngClass]="i %2==0 ? 'buttom':'buttom2'" type="button"><span>Comprar</span></button>
+        </div>
+    </ng-container>
+    </div>
+    </div>
+    <div class="rellenar">
+        <h1 class="title">Añadir libro</h1>
+      
+        <input class="input" type="text" placeholder="Title" #title>
+        <input class="input" type="text" placeholder="Type" #type>
+        <input class="input" type="text" placeholder="Author" #author>
+        <input class="input" type="number" placeholder="price" #price>
+        <input class="input" type="text" placeholder="Photo" #photo>
+        <input class="input" type="number" placeholder="Id_book" #id_book>
+        <input class="input" type="number" placeholder="Id_user" #id_user>
+        
+      <button (click)= "add(title.value, type.value, author.value, price.valueAsNumber, photo.value, id_book.valueAsNumber, id_user.valueAsNumber)" class="buttom2" type="button"><span>Añadir</span></button>
+    </div>
+
+</main>
