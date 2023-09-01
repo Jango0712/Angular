@@ -4,19 +4,8 @@
         <div *ngIf="books.length != 0" class="mensaje"><p>Libros</p></div>
         <div *ngIf="books.length === 0" class="mensaje2"><p>No hay libros...</p></div>
       <div *ngIf="books.length != 0" class="cards"> 
-       <ng-container *ngFor="let book of books; let i = index">
-        <div  class="card">
-            <div class="img"><img class="img-img" src="{{book.photo}}" alt=""></div>
-            <div class="body">
-                <p class="titulo">{{book.title}}</p>
-                <p class="datos">{{ book.type }}</p>
-                <p class="datos">{{ book.author }}</p>
-                <p class="datos">{{ book.id_user }}</p>
-                <p class="datos">{{ book.id_book | ref}}</p>
-                <p class="datos">{{ book.price }} €</p>
-            </div>
-            <button [ngClass]="i %2==0 ? 'buttom':'buttom2'" type="button"><span>Comprar</span></button>
-        </div>
+       <ng-container *ngFor="let bookC of books; let i = index">
+       <app-card [book]="bookC" [i]="i" (eliminar)="delete($event)"></app-card>
     </ng-container>
     </div>
     </div>
