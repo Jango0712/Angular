@@ -50,7 +50,7 @@
         <input type="password" class="form-control" id="exampleInputPassword1" formControlName ='checkPassword' [ngClass]="{'is-invalid': (registro.get('checkPassword').dirty || registro.get('checkPassword').touched) && !registro.get('checkPassword').valid}">
         <div *ngIf="!registro.get('checkPassword').valid" class="invalid">
             <div *ngIf="registro.get('checkPassword').errors.required && registro.get('checkPassword').touched"> Por favor repita su contraseña</div>
-            <div *ngIf="registro.get('checkPassword').errors.checkPasswords"> Las contraseñas deben ser iguales</div>
+            <div *ngIf="!registro.get('checkPassword').errors.required && registro.get('checkPassword').errors.matchPassword "> Las contraseñas deben ser iguales</div>
         </div>
       </div>
       <div class="mb-3">

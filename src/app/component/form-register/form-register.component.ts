@@ -28,7 +28,7 @@ export class FormRegisterComponent {
 
   checkPasswords(control:AbstractControl){
     let resultado = {matchPassword: true};
-    if(control.parent?.value.password == control.value)
+    if(control.parent?.value.password2 == control.value)
     resultado =null;
   return resultado;
   }
