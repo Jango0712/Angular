@@ -32,7 +32,7 @@
 .listNav{
     display: flex;
     gap: 5px;
-    width: 30vw;
+    width: 50vw;
     list-style: none;
     font-size: 30px;
     justify-content: space-around;
@@ -42,6 +42,7 @@
 .routing{
     text-decoration: none;
     color: rgb(144, 142, 142);
+
 }
 
 a:hover{
