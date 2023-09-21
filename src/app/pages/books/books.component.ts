@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Book } from 'src/app/models/book';
+import { BooksService } from 'src/app/shared/books.service';
 
 
 
@@ -10,17 +11,23 @@ import { Book } from 'src/app/models/book';
 })
 export class BooksComponent {
 public books: Book[];
-constructor(){
-this.books = [
-  new Book('El Principito', 'Aventuras', 'José Carlos', 99, 'https://m.media-amazon.com/images/I/81E-RNGwAIL._AC_UF1000,1000_QL80_.jpg'),
- 
-]
-}
-add(title:string, type:string, author:string, price:number, photo:string, id_book:number, id_user:number){
-this.books.push(new Book(title, type, author,price, photo, id_book, id_user))
+constructor(private servicioLibros : BooksService){
+this.books = this.servicioLibros.getAll();
 }
 
+
+
 delete(id_book:number){
-  this.books = this.books.filter(book => book.id_book != id_book)
+  let borrar = this.servicioLibros.deleteBook(id_book)
+  if(borrar === true){
+    this.books = this.books.filter(book => book.id_book != id_book);
+  }
+}
+
+buscar(id_book:number){
+  if(id_book){
+    this.books = [(this.servicioLibros.getOne(id_book))];
+  }else{ this.books = this.servicioLibros.getAll()};
 }
 }
+

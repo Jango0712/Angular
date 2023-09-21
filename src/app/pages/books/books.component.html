@@ -1,5 +1,9 @@
 <main class="fondo">
-
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #buscarLibro>
+    <button class="btn btn-outline-success" type="button" (click)="buscar(buscarLibro.value)">Search</button>
+  </form>
+  <div class="ancho">
     <div class="cartas">
         <div *ngIf="books.length != 0" class="mensaje"><p>Libros</p></div>
         <div *ngIf="books.length === 0" class="mensaje2"><p>No hay libros...</p></div>
@@ -9,18 +13,6 @@
     </ng-container>
     </div>
     </div>
-    <div class="rellenar">
-        <h1 class="title">Añadir libro</h1>
-      
-        <input class="input" type="text" placeholder="Title" #title>
-        <input class="input" type="text" placeholder="Type" #type>
-        <input class="input" type="text" placeholder="Author" #author>
-        <input class="input" type="number" placeholder="price" #price>
-        <input class="input" type="text" placeholder="Photo" #photo>
-        <input class="input" type="number" placeholder="Id_book" #id_book>
-        <input class="input" type="number" placeholder="Id_user" #id_user>
-        
-      <button (click)= "add(title.value, type.value, author.value, price.valueAsNumber, photo.value, id_book.valueAsNumber, id_user.valueAsNumber)" class="buttom2" type="button"><span>Añadir</span></button>
-    </div>
+  </div>
 
 </main>

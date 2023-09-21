@@ -13,6 +13,5 @@ export class CardComponent {
 @Output()eliminar = new EventEmitter<number>()
 lanzarEvento():void{
   this.eliminar.emit(this.book.id_book)
-  console.log("hola")
 }
 }
