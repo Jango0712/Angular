@@ -15,19 +15,20 @@
  }
 
  .rellenar{
-    width: 500px;
-    height: 900px;
-    display: flex;
-    border-radius: 5px;
-    border: solid 5px #0e5579;
-   background-color: #0000008d;
-   padding: 10px;
-   backdrop-filter: blur(3px);
-   box-shadow: 1px 1px 20px 0px #fffdfd;
-   flex-direction: column;
-   align-items: center;
-   color: white;
+  width: 18vw;
+  height: 60vh;
+  display: flex;
+  border-radius: 5px;
+  border: solid 5px #0e5579;
+ background-color: #0000008d;
+ padding: 10px;
+ backdrop-filter: blur(3px);
+ box-shadow: 1px 1px 20px 0px #fffdfd;
+ flex-direction: column;
+ align-items: center;
+ color: white;
 }
+
 
 .title{
     margin-top: 20px;

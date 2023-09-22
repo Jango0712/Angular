@@ -15,8 +15,8 @@
  }
 
  .rellenar{
-    width: 500px;
-    height: 900px;
+    width: 18vw;
+    height: 60vh;
     display: flex;
     border-radius: 5px;
     border: solid 5px #0e5579;
@@ -60,6 +60,7 @@
       cursor: pointer;
       transition: .3s;
       margin: 20px;
+     
   }
 
 
@@ -79,3 +80,5 @@ button:hover span{
 button:active{
     transform: scale(0.9);
 }
+
+

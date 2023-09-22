@@ -15,8 +15,8 @@
  }
 
 .cartas{
-    width: 1700px;
-    height: 1000px;
+    width: 70vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
