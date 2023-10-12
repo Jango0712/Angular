@@ -1,7 +1,7 @@
 <main class="fondo">
   <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #buscarLibro>
-    <button class="btn btn-outline-success" type="button" (click)="buscar(buscarLibro.value)">Search</button>
+    <input class="form-control me-2" type="number" placeholder="Search" aria-label="Search" #buscarLibro>
+    <button class="btn btn-outline-success" type="button" (click)="buscar(buscarLibro.valueAsNumber)">Search</button>
   </form>
   <div class="ancho">
     <div class="cartas">

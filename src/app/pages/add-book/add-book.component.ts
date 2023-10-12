@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
@@ -9,10 +11,14 @@ import { BooksService } from 'src/app/shared/books.service';
 export class AddBookComponent {
 
 
-  constructor(private servicioLibros : BooksService){
+  constructor(private servicioLibros : BooksService, http : HttpClient){
   }
 
   public add(title:string, type:string, author:string, price:number, photo:string, id_book:number, id_user:number):void{
- this.servicioLibros.addBook(title, type, author, price, photo, id_book, id_user)
-  }
+
+
+ this.servicioLibros.addBook(new Book (title, type, author, price, photo, id_book, id_user)).subscribe((data:any) =>{
+  console.log(data);
+  
+})}
 }
